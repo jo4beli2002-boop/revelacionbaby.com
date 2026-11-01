@@ -1,0 +1,18 @@
+{
+  "name": "una-dulce-sorpresa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototipo local de invitaciÃƒÆ’Ã‚Â³n y confirmaciÃƒÆ’Ã‚Â³n de asistencia",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check auth.mjs && node --check gmail-notifications.mjs && node --check message-copy.mjs && node --check public/app.js && node --check public/access.js && node --check public/editor.js && node --check public/media.js && node --check public/visual-model.js && node --check public/visual-editor.js && node --check public/autosave.js && node --check public/animation-upload.js && node --check public/notification-panel.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}
