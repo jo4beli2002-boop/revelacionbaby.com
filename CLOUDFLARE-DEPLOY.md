@@ -1,17 +1,16 @@
-# Publicación en Cloudflare Workers
+# Enlace gratuito de la invitación
 
-El archivo Cloudflare-revelacionbaby.tar.gz contiene el código completo y los recursos de la versión actual: HUD PC/Móvil, registro, invitación PDF del 15 de noviembre y correos. No contiene credenciales ni registros privados.
+Esta versión es un Worker ligero que sirve la página ya publicada bajo la dirección gratuita workers.dev de tu cuenta. No requiere R2, D1, secretos ni Workers Paid. Los datos, el HUD y los correos permanecen en el alojamiento existente.
 
-## Workers Builds
-- Project name: revelacionbaby-com
-- Root directory: /
-- Build command: tar -xzf Cloudflare-revelacionbaby.tar.gz && npm --prefix cloudflare install
-- Deploy command: npm --prefix cloudflare run deploy
-- Preview builds: desactivar durante la configuración inicial
+## Configuración del proyecto revelacionbaby-com
+Build command:
+```sh
+tar -xzf Cloudflare-revelacionbaby.tar.gz && npm --prefix cloudflare install
+```
+Deploy command:
+```sh
+npm --prefix cloudflare run deploy
+```
+Mantener Preview builds y Cloudflare Access desactivados. Reintentar usando el último commit.
 
-El despliegue utiliza D1 (DB) y R2 (BUCKET). Si la cuenta solicita habilitar R2, completar ese paso en Cloudflare antes del despliegue.
-
-## Configuración privada pendiente
-PRIVATE_SEED debe configurarse como Secret en el Worker. Nunca subir su valor a GitHub. Hasta configurar el Secret, la aplicación no permitirá registros.
-
-Después del despliegue hay que probar sesiones, guardado del HUD, CPU del plan gratuito, PDF, correo y persistencia. No comprar un dominio ni considerar terminada la migración antes de esas pruebas.
+No es un dominio propio ni un traslado completo; el servicio depende de que continúe funcionando la página original. Mantenerse dentro de los límites del plan gratuito.
