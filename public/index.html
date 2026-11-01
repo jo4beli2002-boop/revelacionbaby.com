@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="description" content="Un pequeño secreto, una enorme ilusión. Acompáñanos en nuestra revelación y confirma la asistencia de tu familia.">
+ <meta name="theme-color" content="#fefef2"><meta name="robots" content="noindex,nofollow">
+ <title>Una dulce sorpresa · Nuestra revelación</title>
+ <link rel="icon" href="assets/miel.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="editor.css"><link rel="stylesheet" href="mobile.css">
+ <script src="app.js" type="module"></script>
+</head>
+<body class="access-pending">
+<a class="skip-link" href="#main">Ir al contenido</a>
+<header class="site-header" hidden>
+ <a href="#/bienvenida" class="brand" aria-label="Una dulce sorpresa, inicio"><img src="assets/miel.svg" width="27" height="32" alt=""><span>Una dulce sorpresa</span></a>
+ <nav class="page-steps" aria-label="Pasos de la invitación"><a href="#/bienvenida" data-step="bienvenida"><span>1</span> Bienvenida</a><a href="#/registro" data-step="registro"><span>2</span> Registro</a><span data-step="confirmacion"><span>3</span> Celebración</span></nav>
+ <span class="header-date" data-bind="shortDate">08 NOV · 2026</span>
+</header>
+<main id="main" tabindex="-1">
+<div id="page-bienvenida" class="page">
+ <section class="intro-scene scene" aria-labelledby="hero-title">
+  <span class="decoration confetti ribbon pink" aria-hidden="true"></span><span class="decoration star green" aria-hidden="true"></span>
+  <div class="intro-copy reveal"><p class="eyebrow">UN TARRITO DE MIEL ESTÁ EN CAMINO</p><h1 id="hero-title"><span data-bind="title">Un pequeño secreto,</span><em data-bind="titleAccent">una enorme ilusión</em></h1></div>
+  <a href="#tarro" class="scroll-cue"><span>Descubre la sorpresa</span><span class="scroll-line" aria-hidden="true">↓</span></a>
+ </section>
+ <section id="tarro" class="jar-scene scene" aria-label="Un tarrito de miel y una dulce sorpresa">
+  <div class="jar-caption reveal"><span class="eyebrow">ALGO MUY BONITO ESTÁ POR COMENZAR</span><p class="script-note">Una dulce espera…</p></div>
+  <div class="animation animation-jar reveal" data-animation="tarro"><video muted playsinline loop preload="metadata" poster="assets/tarro-poster.jpg" aria-label="Animación de un tarro de miel que gira, se abre y celebra con confeti"><source src="assets/tarro.mp4" type="video/mp4"></video><button class="media-toggle" type="button" aria-label="Pausar animación">Ⅱ</button></div>
+  <span class="decoration dot blue" aria-hidden="true"></span><span class="decoration star yellow" aria-hidden="true"></span>
+ </section>
+ <section class="welcome-scene scene" aria-labelledby="welcome-title">
+  <span class="decoration star lavender" aria-hidden="true"></span><span class="decoration dot pink" aria-hidden="true"></span>
+  <div class="welcome-copy reveal"><p class="eyebrow">LOS MOMENTOS MÁS BONITOS SE COMPARTEN</p><h2 id="welcome-title" data-bind="welcomeTitle">¡Familia, tenemos una dulce sorpresa por descubrir!</h2><p data-bind="welcomeBody">Nos hace mucha ilusión compartir este día. Completa tus datos y cuéntanos qué familias nos acompañarán.</p><a href="#/registro" class="button primary"><span data-bind="welcomeButton">Súmate a la sorpresa</span><span aria-hidden="true">⟶</span></a><div class="extra-buttons" data-buttons="bienvenida"></div><p class="date-note" data-bind="dateNote">DOMINGO 8 DE NOVIEMBRE · 3:00 P. M.</p></div>
+ </section>
+</div>
+<div id="page-registro" class="page" hidden>
+ <section class="registration-intro scene" aria-labelledby="registration-title"><span class="decoration star green" aria-hidden="true"></span><div class="reveal"><p class="eyebrow">UN LUGAR PARA TU FAMILIA</p><h1 id="registration-title" data-bind="registerTitle">Nos hace mucha ilusión compartir este día.</h1><p data-bind="registerBody">Completa tus datos y cuéntanos qué familias nos acompañarán.</p><a href="#formulario" class="scroll-cue"><span>Confirma tu asistencia</span><span class="scroll-line" aria-hidden="true">↓</span></a></div></section>
+ <section id="formulario" class="registration-section" aria-label="Formulario de asistencia">
+  <div class="registration-illustration"><div class="animation animation-bear" data-animation="osito"><video muted playsinline loop preload="metadata" poster="assets/osito-v2-poster.jpg" aria-label="Un osito sube una escalera y come miel de un tarro"><source src="assets/osito-v2.mp4" type="video/mp4"></video><button class="media-toggle" type="button" aria-label="Pausar animación">Ⅱ</button></div><p class="script-note">La alegría se multiplica contigo.</p></div>
+  <form id="rsvp-form" novalidate><p class="eyebrow">JUNTOS EN ESTA DULCE ESPERA</p><h2 data-bind="formTitle">Confirma tu asistencia</h2>
+   <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="nombre@correo.com" aria-describedby="email-error"><p class="field-error" id="email-error"></p></div>
+   <fieldset class="family-fieldset" aria-describedby="family-help family-error"><legend id="family-legend">Asistirá la familia</legend><p id="family-help">Selecciona una o varias familias.</p><button id="family-trigger" class="family-trigger" type="button" aria-expanded="false" aria-controls="family-dropdown"><span id="family-summary">Selecciona tu familia</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button><div id="family-dropdown" class="family-dropdown" hidden><div id="family-options" class="family-options"></div><button id="family-done" type="button" class="family-done">Listo</button></div><p class="field-error" id="family-error"></p></fieldset>
+   <div class="field"><label for="phone">Tu número de WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="24" placeholder="+504 0000-0000" aria-describedby="phone-help phone-error"><p id="phone-help" class="phone-help">Recibe aquí los datos de la celebración. Para Honduras puedes escribir solo los 8 dígitos; para otro país, incluye su código.</p><p class="field-error" id="phone-error"></p></div>
+   <div class="consent-field"><label class="check-label"><input type="checkbox" id="attendance" name="attendance" required aria-describedby="attendance-error"><span>Confirmamos que asistiremos a la celebración.</span></label><p class="field-error" id="attendance-error"></p></div>
+   <div id="whatsapp-optin" class="consent-field whatsapp-consent"><label id="whatsapp-optin-label" class="check-label"><input type="checkbox" id="whatsapp-consent" name="whatsappConsent"><span id="whatsapp-optin-text">Pueden enviarme por WhatsApp la confirmación y los datos de este evento en el número indicado.</span></label><p id="whatsapp-optin-help" class="phone-help">Opcional. Puedes confirmar tu asistencia aunque no marques esta casilla.</p></div>
+   <div class="honeypot" aria-hidden="true"><label for="website">Deja este campo vacío</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+   <p id="form-error" class="field-error" role="alert"></p><button class="button primary" type="submit"><span>Confirmar asistencia</span><span aria-hidden="true">⟶</span></button><div class="extra-buttons" data-buttons="registro"></div>
+   <p class="form-note">Tus datos se usarán para organizar esta celebración.</p>
+  </form>
+ </section>
+</div>
+<div id="page-confirmacion" class="page" hidden>
+ <section class="confirmation-scene" aria-labelledby="confirmation-title">
+  <span class="decoration ribbon blue" aria-hidden="true"></span><span class="decoration dot pink" aria-hidden="true"></span><span class="decoration star yellow" aria-hidden="true"></span>
+  <div class="confirmation-heading reveal"><div class="success-check" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="m20 41 14 14 28-34"/></svg></div><p class="eyebrow" data-bind="confirmationLabel">ASISTENCIA CONFIRMADA</p><h1 id="confirmation-title" data-bind="confirmationTitle">¡La sorpresa se vive en familia!</h1><p id="personal-thanks">Gracias por acompañarnos en esta dulce espera.</p></div>
+  <div class="celebration-layout"><div class="event-card reveal"><p class="eyebrow">NOS VEMOS EL</p><h2 data-bind="eventDate">Domingo 8 de noviembre</h2><p class="event-time" data-bind="eventTime">a las 3:00 p. m.</p><div class="event-divider"></div><p class="event-place" data-bind="eventPlace">Centro comunal Abraham Lincoln</p><button type="button" id="calendar-button" class="calendar-button">Guardar la fecha <span aria-hidden="true">↗</span></button></div><div class="animation animation-tiger reveal" data-animation="tigre"><video muted playsinline loop preload="metadata" poster="assets/tigre-poster.jpg" aria-label="Un tigre aparece y saluda con alegría"><source src="assets/tigre.mp4" type="video/mp4"></video><button class="media-toggle" type="button" aria-label="Pausar animación">Ⅱ</button></div></div>
+  <p class="script-note closing-note" data-bind="closing">Con cariño, los esperamos.</p><div class="extra-buttons" data-buttons="confirmacion"></div>
+  <div id="manual-whatsapp" class="manual-whatsapp" hidden><a id="notify-whatsapp" class="button primary" target="_blank" rel="noopener noreferrer"><span id="notify-whatsapp-label" data-bind="whatsappButton">Avisar por WhatsApp</span><span id="notify-whatsapp-arrow" aria-hidden="true">⟶</span></a><p id="notify-whatsapp-help" class="form-note" data-bind="whatsappHelp">Se abrirá WhatsApp con tu familia y la confirmación ya escritas. Pulsa Enviar para avisarnos.</p></div>
+ </section>
+</div>
+</main>
+<footer class="site-footer" hidden><span>Un tarrito de miel está en camino.</span><span>HECHO CON AMOR · PARA NUESTRA FAMILIA</span><button type="button" id="restart-button">Volver al inicio <span aria-hidden="true">↗</span></button></footer>
+<div class="toast" role="status" aria-live="polite" hidden></div>
+<div id="editor-root"></div>
+<dialog id="access-dialog" aria-labelledby="access-title"><form id="access-form"><img src="assets/miel.svg" width="42" height="48" alt=""><p class="eyebrow">UNA DULCE SORPRESA</p><h2 id="access-title">Antes de descubrir<br>la sorpresa…</h2><p class="access-message">Cuéntanos cómo te llamas.<br>Nos alegra que estés aquí.</p><label for="visitor-name">Tu nombre</label><input id="visitor-name" name="visitorName" autocomplete="username" maxlength="80" required placeholder="Escribe tu nombre" autofocus><div id="access-password-field" hidden><label for="admin-password">Contraseña de administrador</label><input id="admin-password" name="adminPassword" type="password" autocomplete="current-password" maxlength="200" placeholder="Ingresa tu contraseña"></div><p id="access-error" class="field-error" role="alert"></p><button class="button primary" type="submit"><span>Entrar a la sorpresa</span><span aria-hidden="true">⟶</span></button></form></dialog>
+</body></html>
